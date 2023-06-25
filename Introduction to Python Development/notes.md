@@ -645,3 +645,83 @@ You can work with the variable inside the for loop.
     ...
     green
 
+## Encapsulating Code
+
+### 1. Functions
+
+Functions are used to encapsulate code that can be reused.
+
+    >>> def say_hello():
+    ...     print("Hello")
+    ...
+    >>> say_hello()
+    Hello
+
+You can pass arguments to a function.
+
+    >>> def say_hello(name):
+    ...     print(f"Hello {name}")
+    ...
+    >>> say_hello("John")
+    Hello John
+
+You can set default values for arguments.
+
+    >>> def say_hello(name="John"):
+    ...     print(f"Hello {name}")
+    ...
+    >>> say_hello()
+    Hello John
+    >>> say_hello("Jane")
+    Hello Jane
+
+You can return values from a function.
+
+    >>> def add(a, b):
+    ...     return a + b
+    ...
+    >>> add(1, 2)
+    3
+
+If you don't return a value, the function will return None.
+
+    >>> def say_hello():
+    ...     print("Hello")
+    ...
+    >>> output = say_hello()
+    Hello
+    >>> print(output)
+    None
+
+You can pass more than one argument to a function.
+
+    >>> def contact_card(name, age, car_model):
+    ...     return f"{name} is {age} and drives a {car_model}"
+    ...
+    >>> contact_card("John", 28, "Toyota")
+    'John is 28 and drives a Toyota'
+    >>> contact_card(age=28, name="John", car_model="Toyota")
+    'John is 28 and drives a Toyota'
+
+You can mix positional and keyword arguments, but positional arguments must come first.
+
+    >>> def contact_card(name, age, car_model):
+    ...     return f"{name} is {age} and drives a {car_model}"
+    ...
+    >>> contact_card("John", car_model="Toyota", age=28)
+    'John is 28 and drives a Toyota'
+    >>> contact_card(age=28, car_model="Toyota", "John")
+        File "<stdin>", line 1
+    SyntaxError: positional argument follows keyword argument
+
+You can set default values for keyword arguments.
+
+    >>> def contact_card(name, age, car_model="Toyota"):
+    ...     return f"{name} is {age} and drives a {car_model}"
+    ...
+    >>> contact_card("John", 28)
+    'John is 28 and drives a Toyota'
+    >>> contact_card("John", 28, "Honda")
+    'John is 28 and drives a Honda'
+
+ 
