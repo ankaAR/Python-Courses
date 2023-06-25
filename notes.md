@@ -441,7 +441,7 @@ You can use the dict() function passing the value pairs as a list of tuples.
 
 Dictionaries are useful when you want to store data in key-value pairs.
 
-## 4. Control Flow
+## Control Flow
 
 ### 1. Conditional and Comparison
 
@@ -565,3 +565,83 @@ While loops are used to execute a block of code while a condition is True.
     2
     3
     4
+
+You can use keyboard interrupt (Ctrl + C) to stop a while loop.
+
+    >>> while True:
+    ...     print("Hello")
+    ...
+    Hello
+    Hello
+    Hello
+    ^C
+    KeyboardInterrupt
+
+Normally you will have a counter variable to keep track of the number of iterations.
+
+    >>> counter = 1
+    >>> while counter <= 5:
+    ...     print(counter)
+    ...     counter += 1
+    ...
+    1
+    2
+    3
+    4
+    5
+
+You can use else to execute a block of code when the condition is False.
+
+    >>> counter = 1
+    >>> while counter <= 10:
+    ...     if counter % 2 == 0:
+    ...         counter += 1
+    ...         continue
+    ...     print(f"We're counting odd numbers: {counter}")
+    ...     counter += 1
+    ...
+    We're counting odd numbers: 1
+    We're counting odd numbers: 3
+    We're counting odd numbers: 5
+    We're counting odd numbers: 7
+    We're counting odd numbers: 9
+
+You can break out of a while loop.
+
+    >>> counter = 1
+    >>> while counter <= 10:
+    ...     if counter == 5:
+    ...         break
+    ...     print(counter)
+    ...     counter += 1
+    ...
+    1
+    2
+    3
+    4
+
+### 4. For Statements
+
+For statements are used to iterate over a sequence.
+
+    >>>colors = ["red", "green", "blue", "purple"]
+    >>> for color in colors:
+    ...     print(color)
+    ...
+    red
+    green
+    blue
+    purple
+
+You can work with the variable inside the for loop.
+
+    >>> colors = ["red", "green", "blue", "purple"]
+    >>> for color in colors:
+    ...     if color == "red":
+    ...         continue
+    ...     elif color == "blue":
+    ...         break
+    ...     print(color)
+    ...
+    green
+
